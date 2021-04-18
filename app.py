@@ -5,9 +5,18 @@ app = Flask(__name__)
 @app.route('/')
 def index():
     return render_template('index.html')
+
 @app.route('/aboutthisapplication')
 def about():
     return render_template('about.html')
+
+@app.route('/temperature')
+def temperature():
+    return render_template('temperature.html')
+
+@app.route('/pressure')
+def pressure():
+    return render_template('pressure.html')
 
 if __name__ == '__main__':
     app.run(debug=True, host='0.0.0.0')
