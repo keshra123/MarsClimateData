@@ -1,20 +1,20 @@
 from flask import Flask, render_template
 
-app = Flask(__name__)
+my_awesome_app = Flask(__name__)
 
-@app.route('/')
+@my_awesome_app.route('/')
 def index():
     return render_template('index.html')
 
-@app.route('/aboutthisapplication')
+@my_awesome_app.route('/aboutthisapplication')
 def about():
     return render_template('about.html')
 
-@app.route('/temperature')
+@my_awesome_app.route('/temperature')
 def temperature():
     return render_template('temperature.html')
 
-@app.route('/pressure')
+@my_awesome_app.route('/pressure')
 def pressure():
     return render_template('pressure.html')
 
